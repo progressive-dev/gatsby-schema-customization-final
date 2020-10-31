@@ -17,7 +17,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const result = await graphql(`
       query {
-        allMarkdownRemark(filter: {frontmatter: {dummy_content: {ne: true}}}) {
+        allMarkdownRemark {
           edges {
             node {
               fields {
