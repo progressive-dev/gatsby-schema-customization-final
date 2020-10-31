@@ -5,10 +5,10 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby with TypeScript Tutorial Starter
+  Gatsby Schema Customization Tutorial
 </h1>
 
-This is a starter code for the tutorial. In this tutorial we're going to convert all Gatsby files to TypeScript, and achieve 100% type-checking.
+In this tutorial, we explore how we can avoid Gatsby build errors on missing content by using Create Schema Customization API.
 
 ## 🚀 Quick start
 
