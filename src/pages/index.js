@@ -41,6 +41,10 @@ const Home = ({ data }) => {
                 </span>
               </h3>
             </Link>
+            <p css={css`
+              color: #00db00;
+            `}
+            >{node.frontmatter.author}</p>
             <p>{node.excerpt}</p>
           </div>
         ))}
@@ -59,6 +63,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            author
           }
           excerpt
           fields {
