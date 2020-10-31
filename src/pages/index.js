@@ -51,7 +51,7 @@ const Home = ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: {frontmatter: {dummy_content: {ne: true}}}) {
       totalCount
       edges {
         node {

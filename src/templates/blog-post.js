@@ -8,6 +8,7 @@ const BlogPost = ({ data }) => {
     <Layout>
       <div>
         <h1>{post.frontmatter.title}</h1>
+        <p style={{color: '#00db00'}}>{post.frontmatter.author}</p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
@@ -19,6 +20,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        author
       }
     }
   }
