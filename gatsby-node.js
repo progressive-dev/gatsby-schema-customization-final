@@ -1,4 +1,5 @@
 const path = require('path');
+const customizeMarkdownRemark = require('./src/gatsby/customize-markdown-remark');
 const { createFilePath } = require('gatsby-source-filesystem');
 
 module.exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -40,4 +41,10 @@ module.exports.createPages = async ({ graphql, actions }) => {
           },
       })
     })
+  }
+
+  module.exports.createSchemaCustomization = ({ actions }) => {
+    const { createTypes } = actions
+
+    customizeMarkdownRemark(createTypes);
   }
